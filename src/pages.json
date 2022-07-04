@@ -3,8 +3,14 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "大壮，您身边的律师朋友"
 			}
+		},
+		{
+			"path": "pages/user/index"
+		},
+		{
+			"path": "pages/test/index"
 		}
 	],
 	"globalStyle": {
@@ -12,5 +18,27 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#333333",
+		"selectedColor": "#333333",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "white",
+		"height": "55px",
+		"iconWidth": "20px",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/icon/home.png",
+				"selectedIconPath": "static/icon/home_active.png"
+			},
+			{
+				"pagePath": "pages/user/index",
+				"text": "我的",
+				"iconPath": "static/icon/mine.png",
+				"selectedIconPath": "static/icon/mine_active.png"
+			}
+		]
 	}
 }

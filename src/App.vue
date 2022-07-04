@@ -14,4 +14,5 @@
 
 <style>
 	/*每个页面公共css */
+	@import url('../src/static/css/mian.css');
 </style>
