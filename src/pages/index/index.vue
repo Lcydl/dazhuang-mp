@@ -16,6 +16,17 @@
 				</swiper-item>
 			</swiper>
 		</view>
+		<!-- 模块入口 -->
+		<view>
+			<view class="uni-flex uni-row">
+				<view class="text">横向布局-自动宽度</view>
+				<view class="text">横向布局-自动宽度</view>
+			</view>
+			<view class="uni-flex uni-row">
+				<view class="text">横向布局-自动宽度</view>
+				<view class="text">横向布局-自动宽度</view>
+			</view>
+		</view>
 	</view>
 </template>
 
