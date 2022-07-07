@@ -81,6 +81,7 @@
 					<view>刑事案件</view>
 				</uni-col>
 			</uni-row>
+			<!-- TODO: 推广模块 -->
 		</view>
 		<!-- 推荐咨询 -->
 		<view class="zone">
@@ -93,14 +94,39 @@
 			</view>
 			<ul class="counsel_list">
 				<li class="counsel">
-					<view>
-
+					<view class="user">
+						<view class="user-info">
+							<view class="avatar avatar-user"></view>
+							<view class="phone">177********</view>
+							<view class="tag">劳动纠纷</view>
+						</view>
+						<view class="content">
+							在私人家里干活，意外受伤，双方决定私了，协商赔偿款，双方一直拖欠款项，应该如何处理......
+						</view>
 					</view>
-					<view>
-
+					<view class="lawyer">
+						<view class="lawyer-info">
+							<view class="name">法律顾问</view>
+							<view class="avatar avatar-lawyer"></view>
+						</view>
+						<view>
+							用人单位应该按照约定日期支付劳动者工资，并不得......
+						</view>
 					</view>
 				</li>
 			</ul>
+		</view>
+		<!-- 常见问题 -->
+		<view class="zone">
+			<view class="title-bar">
+				<view class="title">常见问题</view>
+			</view>
+		</view>
+		<!-- 附近门店 -->
+		<view class="zone">
+			<view class="title-bar">
+				<view class="title">附近门店</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -135,6 +161,7 @@ export default {
 <style>
 .index-wrap {
 	padding: 15px;
+	color: #333333;
 }
 
 .uni-margin-wrap {
@@ -166,7 +193,7 @@ export default {
 	background-image: url('../../static/mock/banner3.png');
 }
 
-.module, .category {
+.module, .category, .counsel_list {
 	margin-top: 10px;
 }
 
@@ -180,7 +207,6 @@ export default {
 }
 
 .index-module .title {
-	color: #333333;
 	font-weight: 600;
 	font-size: 22px;
 }
@@ -209,7 +235,6 @@ export default {
 
 .title-bar .title {
 	font-size: 24px;
-	color: #333333;
 	font-weight: 600;
 	display: inline-block;
 }
@@ -226,13 +251,76 @@ export default {
 }
 
 .category img {
-	width: 60px;
-	height: 60px;
-	border-radius: 26px;
+	width: 50px;
+	height: 50px;
+	border-radius: 21px;
 	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
 .counsel_list {
 	list-style-type: none;
+	padding: 0;
+}
+
+.counsel .avatar {
+	width: 36px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: #eeeeee;
+	display: inline-block;
+}
+
+.avatar-user {
+	background: url('../../static/icon/user.png') no-repeat center 80%;
+	background-size: 49% 80%;
+}
+
+.avatar-lawyer {
+	background: url('../../static/icon/lawyer.png') no-repeat center 93%;
+	background-size: 80%;
+}
+
+.user .user-info {
+	height: 40px;
+	position: relative;
+}
+
+.user .user-info > *, .lawyer-info > * {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.user .user-info .phone {
+	margin-left: 10px;
+}
+
+.user .content {
+	margin: 12px 0;
+}
+
+.user .tag {
+	font-size: 14px;
+    padding: 4px 10px;
+    background-color: #cfa972;
+    color: #ffffff;
+    border-radius: 3px;
+	position: absolute;
+    right: 0;
+    top: 6.5px;
+}
+
+.lawyer {
+	color: #666666;
+	background-color: #f9f9f9;
+	padding: 15px;
+}
+
+.lawyer .lawyer-info {
+	text-align: end;
+	height: 40px;
+}
+
+.lawyer .lawyer-info .name {
+	margin-right: 10px;
 }
 </style>
