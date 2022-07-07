@@ -66,19 +66,19 @@
 			<uni-row class="category">
 				<uni-col :span="6">
 					<img src="../../static/mock/ic_labor_dispute.png" alt="劳动纠纷" />
-					<view>劳动纠纷</view>
+					<view class="type">劳动纠纷</view>
 				</uni-col>
 				<uni-col :span="6">
 					<img src="../../static/mock/ic_bond.png" alt="债权债务" />
-					<view>债权债务</view>
+					<view class="type">债权债务</view>
 				</uni-col>
 				<uni-col :span="6">
 					<img src="../../static/mock/ic_marriage.png" alt="婚姻家事" />
-					<view>婚姻家事</view>
+					<view class="type">婚姻家事</view>
 				</uni-col>
 				<uni-col :span="6">
 					<img src="../../static/mock/ic_crown_case.png" alt="刑事案件" />
-					<view>刑事案件</view>
+					<view class="type">刑事案件</view>
 				</uni-col>
 			</uni-row>
 			<!-- TODO: 推广模块 -->
@@ -109,7 +109,7 @@
 							<view class="name">法律顾问</view>
 							<view class="avatar avatar-lawyer"></view>
 						</view>
-						<view>
+						<view class="content">
 							用人单位应该按照约定日期支付劳动者工资，并不得......
 						</view>
 					</view>
@@ -121,6 +121,23 @@
 			<view class="title-bar">
 				<view class="title">常见问题</view>
 			</view>
+			<ul class="question_list">
+					<li>
+						<view class="question">Q遇到法律问题，该怎么办呢？</view>
+						<view class="answer">非专业人士遇到法律问题，上网搜索答案情况不同，难以保证适用性，同人法律提供专业法律服务，专业人员给出专业解决方案</view>
+						<view class="dvider"></view>
+					</li>
+					<li>
+						<view class="question">咨询法律问题前，需要准备什么？</view>
+						<view class="answer">为了有效利用您的咨询时间，需要您在咨询前，尽可能把您的问题梳理清楚。</view>
+						<view class="dvider"></view>
+					</li>
+					<li>
+						<view class="question">律师超时未联系，怎么处理？</view>
+						<view class="answer">有时律师可能因为开庭等事项，导致无法及时响应。如果超时未致电，请联系客服，客服会为您协调解决。</view>
+						<view class="dvider"></view>
+					</li>
+				</ul>
 		</view>
 		<!-- 附近门店 -->
 		<view class="zone">
@@ -198,9 +215,9 @@ export default {
 }
 
 .index-module {
-	height: 100px;
+	height: 86px;
 	background-color: #f3f4fc;
-	border-radius: 10px;
+	border-radius: 4px;
 	margin-top: 15px;
 	padding: 10px;
 	box-sizing: border-box;
@@ -208,11 +225,12 @@ export default {
 
 .index-module .title {
 	font-weight: 600;
-	font-size: 22px;
+	font-size: 16px;
 }
 
 .index-module .subtitle {
 	color: #999999;
+	font-size: 13px;
 }
 
 .index-module .price {
@@ -226,6 +244,7 @@ export default {
 
 .category {
 	text-align: center;
+	font-size: 14px;
 }
 
 .title-bar {
@@ -234,13 +253,13 @@ export default {
 }
 
 .title-bar .title {
-	font-size: 24px;
+	font-size: 20px;
 	font-weight: 600;
 	display: inline-block;
 }
 
 .title-bar .subtitle {
-	font-size: 20px;
+	font-size: 17px;
 	color: #666666;
 	margin-left: 20px;
 }
@@ -248,16 +267,21 @@ export default {
 .title-bar .more {
 	color: #999999;
 	float: right;
+	font-size: 14px;
 }
 
 .category img {
-	width: 50px;
-	height: 50px;
+	width: 46px;
+	height: 46px;
 	border-radius: 21px;
 	box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
-.counsel_list {
+.category .type {
+	margin-top: 4px;
+}
+
+ul {
 	list-style-type: none;
 	padding: 0;
 }
@@ -296,10 +320,11 @@ export default {
 
 .user .content {
 	margin: 12px 0;
+	font-size: 14px;
 }
 
 .user .tag {
-	font-size: 14px;
+	font-size: 12px;
     padding: 4px 10px;
     background-color: #cfa972;
     color: #ffffff;
@@ -321,6 +346,33 @@ export default {
 }
 
 .lawyer .lawyer-info .name {
+	font-size: 14px;
 	margin-right: 10px;
+}
+
+.lawyer .content {
+	font-size: 13px;
+}
+
+.question_list li {
+	margin-bottom: 20px;
+}
+
+.question_list .question {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.question_list .answer {
+	font-size: 13px;
+	color: #666666;
+}
+
+.dvider {
+	display: block;
+    height: 1px;
+    width: 100%;
+	background-color: #dcdfe6;
+    position: relative;
 }
 </style>
