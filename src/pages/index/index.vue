@@ -26,6 +26,7 @@
 							<view>及时解决难题</view>
 							<view class="price">98</view>元/45分钟
 						</view>
+						<view class="badge">推荐</view>
 					</view>
 				</uni-col>
 				<uni-col :span="12">
@@ -35,6 +36,7 @@
 							<view>及时解决难题</view>	
 							<view class="price">29</view>元/3次
 						</view>
+						<view class="badge">最热</view>
 					</view>
 				</uni-col>
 			</uni-row>
@@ -65,19 +67,19 @@
 			</view>
 			<uni-row class="category">
 				<uni-col :span="6">
-					<img src="../../static/mock/ic_labor_dispute.png" alt="劳动纠纷" />
+					<img src="../../static/image/ic_labor_dispute.png" alt="劳动纠纷" />
 					<view class="type">劳动纠纷</view>
 				</uni-col>
 				<uni-col :span="6">
-					<img src="../../static/mock/ic_bond.png" alt="债权债务" />
+					<img src="../../static/image/ic_bond.png" alt="债权债务" />
 					<view class="type">债权债务</view>
 				</uni-col>
 				<uni-col :span="6">
-					<img src="../../static/mock/ic_marriage.png" alt="婚姻家事" />
+					<img src="../../static/image/ic_marriage.png" alt="婚姻家事" />
 					<view class="type">婚姻家事</view>
 				</uni-col>
 				<uni-col :span="6">
-					<img src="../../static/mock/ic_crown_case.png" alt="刑事案件" />
+					<img src="../../static/image/ic_crown_case.png" alt="刑事案件" />
 					<view class="type">刑事案件</view>
 				</uni-col>
 			</uni-row>
@@ -123,17 +125,26 @@
 			</view>
 			<ul class="question_list">
 					<li>
-						<view class="question">Q遇到法律问题，该怎么办呢？</view>
+						<view >
+							<view class="icon">Q</view>
+							<view class="question">遇到法律问题，该怎么办呢？</view>
+						</view>
 						<view class="answer">非专业人士遇到法律问题，上网搜索答案情况不同，难以保证适用性，同人法律提供专业法律服务，专业人员给出专业解决方案</view>
 						<view class="dvider"></view>
 					</li>
 					<li>
-						<view class="question">咨询法律问题前，需要准备什么？</view>
+						<view>
+							<view class="icon">Q</view>
+							<view class="question">咨询法律问题前，需要准备什么？</view>
+						</view>
 						<view class="answer">为了有效利用您的咨询时间，需要您在咨询前，尽可能把您的问题梳理清楚。</view>
 						<view class="dvider"></view>
 					</li>
 					<li>
-						<view class="question">律师超时未联系，怎么处理？</view>
+						<view>
+							<view class="icon">Q</view>
+							<view class="question">律师超时未联系，怎么处理？</view>
+						</view>
 						<view class="answer">有时律师可能因为开庭等事项，导致无法及时响应。如果超时未致电，请联系客服，客服会为您协调解决。</view>
 						<view class="dvider"></view>
 					</li>
@@ -143,6 +154,9 @@
 		<view class="zone">
 			<view class="title-bar">
 				<view class="title">附近门店</view>
+			</view>
+			<view class="map-border">
+				<view class="view">查看附近门店</view>
 			</view>
 		</view>
 	</view>
@@ -158,7 +172,7 @@ export default {
             background: ["color1", "color2", "color3"],
             swiperConfig: {
                 indicatorDots: true,
-                autoplay: false,
+                autoplay: true,
                 interval: 2000,
                 duration: 500,
                 indicatorActiveColor: "#292c4b"
@@ -199,15 +213,15 @@ export default {
 }
 
 .uni-bg-red {
-	background-image: url('../../static/mock/banner1.png');
+	background-image: url('../../static/image/banner1.png');
 }
 
 .uni-bg-green {
-	background-image: url('../../static/mock/banner2.png');
+	background-image: url('../../static/image/banner2.png');
 }
 
 .uni-bg-blue {
-	background-image: url('../../static/mock/banner3.png');
+	background-image: url('../../static/image/banner3.png');
 }
 
 .module, .category, .counsel_list {
@@ -221,6 +235,7 @@ export default {
 	margin-top: 15px;
 	padding: 10px;
 	box-sizing: border-box;
+	position: relative;
 }
 
 .index-module .title {
@@ -236,6 +251,17 @@ export default {
 .index-module .price {
 	color: #eb6100;
 	display: inline-block;
+}
+
+.index-module .badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 13px;
+    color: #ffffff;
+    background-color: #f46710;
+    padding: 3px 7px;
+	border-radius: 0 4px;
 }
 
 .zone {
@@ -358,21 +384,56 @@ ul {
 	margin-bottom: 20px;
 }
 
+.question_list .icon {
+	padding: 1px 5px;
+	color: #ffffff;
+	background-color: #292c4b;
+	font-size: 13px;
+	border-radius: 3px;
+	display: inline-block;
+}
+
 .question_list .question {
 	font-weight: 600;
 	font-size: 14px;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 .question_list .answer {
 	font-size: 13px;
 	color: #666666;
+	margin-top: 10px;
+	margin-left: 30.6px;
 }
 
 .dvider {
 	display: block;
     height: 1px;
     width: 100%;
-	background-color: #dcdfe6;
+	background-color: #F2F6FC;
     position: relative;
+	margin-top: 15px;
+}
+
+.map-border {
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+	background: url('../../static/image/bg_map.png') no-repeat;
+	background-size: 100%;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.map-border .view {
+	padding: 10px  35px;
+    background-color: #ffffffb5;
+    display: inline-block;
+    border-radius: 5px;
+	font-weight: 600;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 </style>
