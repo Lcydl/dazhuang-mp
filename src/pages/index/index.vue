@@ -258,9 +258,9 @@ export default {
 	top: 0;
 	right: 0;
 	font-size: 13px;
-    color: #ffffff;
-    background-color: #f46710;
-    padding: 3px 7px;
+	color: #ffffff;
+	background-color: #f46710;
+	padding: 3px 7px;
 	border-radius: 0 4px;
 }
 
@@ -351,13 +351,13 @@ ul {
 
 .user .tag {
 	font-size: 12px;
-    padding: 4px 10px;
-    background-color: #cfa972;
-    color: #ffffff;
-    border-radius: 3px;
+	padding: 4px 10px;
+	background-color: #cfa972;
+	color: #ffffff;
+	border-radius: 3px;
 	position: absolute;
-    right: 0;
-    top: 6.5px;
+	right: 0;
+	top: 6.5px;
 }
 
 .lawyer {
@@ -409,10 +409,10 @@ ul {
 
 .dvider {
 	display: block;
-    height: 1px;
-    width: 100%;
+	height: 1px;
+	width: 100%;
 	background-color: #F2F6FC;
-    position: relative;
+	position: relative;
 	margin-top: 15px;
 }
 
@@ -428,12 +428,12 @@ ul {
 
 .map-border .view {
 	padding: 10px  35px;
-    background-color: #ffffffb5;
-    display: inline-block;
-    border-radius: 5px;
+	background-color: #ffffffb5;
+	display: inline-block;
+	border-radius: 5px;
 	font-weight: 600;
 	position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+	top: 50%;
+	transform: translateY(-50%);
 }
 </style>
